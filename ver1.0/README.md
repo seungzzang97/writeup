@@ -1,2 +1,7 @@
-# Mini_Web
-Web vulnerability 위한 미니 웹  💻
+# Mini_Web v1.0
+
+# Tools
+- MySql
+- Apache
+- Bootstrap
+
