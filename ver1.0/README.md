@@ -11,9 +11,9 @@
 
 ---
 
-<div style="text-align : center;">
-<img src="./image/1.PNG">
-<img src="./image/2.PNG">
-<img src="./image/3.PNG">
-</div>
+<p align="center">
+<img src="./image/1.PNG" height="400" width="700">
+<img src="./image/2.PNG" height="400" width="700">
+<img src="./image/3.PNG" height="400" width="700">
+</p>
 
