@@ -17,8 +17,6 @@
 <img src="./image/3.PNG" height="400" width="700">
 </p>
 
----
-
 # Contents
 
 1. 간단한 로그인만을 구현하기 위해 기본키로 사용할 user_numberd 필드, user_id 필드, user_password 필드만 구성함
@@ -30,9 +28,16 @@ CREATE TABLE user (
     PRIMARY KEY (user_number),
     UNIQUE KEY (user_id)
 );
+
+INSERT INTO user VALUES(DEFAULT, 'admin', '1');
+INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
 ```
+<p align="center">
+<img src="./image/4.PNG">
+</p>
 
 2. PHP와 Mysql을 연동시키기 위해 MySQLi 확장 API 절차 지향 스타일로 연동
+
 ```php
 <?php
     mysqli_report(MYSQLI_REPORT_OFF);
