@@ -10,8 +10,8 @@
 - PHP 오류 메시지 출력을 설정 했을 때 따옴표를 입력 해보았다. <br><br>
 
 <p align = "center">
-<img src = "./image/1.PNG">
-<img src = "./image/2.PNG">
+<img src = "./image/1.PNG"height="400" width="600"> <br>
+<img src = "./image/2.PNG"height="400" width="600">
 </p>
 
 
@@ -103,6 +103,6 @@ $sql = "SELECT * FROM user WHERE user_id = '$user_id' and user_password = '$user
     }
 ```
 
-[TOP](#Error)
+[TOP](error-base-sql-injection)
 
 
