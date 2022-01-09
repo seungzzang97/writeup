@@ -104,8 +104,9 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
     </body>
 </html>
 ```
+---
 
-4. 로그인 인증
+4. 로그인 인증 구현
 
 ```php
 <?php
@@ -132,11 +133,13 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
         echo "<script>alert('인증성공');</script>";
         echo "<script>location.replace('./success.php');</script>"; 
     }
-
 ?>
 ```
+<br>
+
 - 회원가입 기능을 구현하지 않았기 때문에 데이터베이스에 임의로 데이터를 입력함 
 - 사용자가 입력한 패스워드와 DB에서의 user_password는 암호화 X
+<br>
 
 ```php
     if(!$user['user_id'] || !($user_password == $user['user_password'])){
@@ -146,7 +149,8 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
     }
 ```
 - 위와 같은 이유로 사용자가 입력한 패스워드와 DB에 저장된 패스워드를 평문으로 비교하도록 구현함
-
+---
+<br>
 
 <p align="center">
 <img src="./image/1.PNG" height="400" width="700">
