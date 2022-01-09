@@ -1,25 +1,18 @@
-# Mini_Web v1.0
-
-# Description
+### Mini_Web v1.0
 - SQL Injection의 정확한 원리를 파악하기 위해 직접 로그인 기능만을 구현
-
-# Tools
+---
+### Tools
 - MySql
 - Apache
 - Bootstrap
 - PHP
-
 ---
 
-<p align="center">
-<img src="./image/1.PNG" height="400" width="700">
-<img src="./image/2.PNG" height="400" width="700">
-<img src="./image/3.PNG" height="400" width="700">
-</p>
+### Description
+<br><br><br>
 
-# Contents
-
-1. 간단한 로그인만을 구현하기 위해 기본키로 사용할 user_numberd 필드, user_id 필드, user_password 필드만 구성함
+1. 간단한 로그인만을 구현하기 위해 기본키로 사용할 user_numberd 필드, user_id 필드, user_password 필드만 구성
+<br><br>
 ```
 CREATE TABLE user (
     user_number INT(11) NOT NULL AUTO_INCREMENT,
@@ -35,9 +28,12 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
 
 <img src="./image/4.PNG">
 
+<br>
+
+---
 
 2. PHP와 Mysql을 연동시키기 위해 MySQLi 확장 API 절차 지향 스타일로 연동
-
+<br><br>
 ```php
 <?php
     mysqli_report(MYSQLI_REPORT_OFF);
@@ -60,8 +56,10 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
     session_start();
 ?>
 ```
-3. 웹 디자인이 목적이 아니라고 생각하여 부트스트랩을 이용해 로그인화면을 구현
+---
 
+3. 부트스트랩을 사용하여 로그인화면을 구현
+<br><br>
 ```html
 <?php
     include("./db_connetcion.php")
@@ -150,4 +148,8 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
 - 위와 같은 이유로 사용자가 입력한 패스워드와 DB에 저장된 패스워드를 평문으로 비교하도록 구현함
 
 
-
+<p align="center">
+<img src="./image/1.PNG" height="400" width="700">
+<img src="./image/2.PNG" height="400" width="700">
+<img src="./image/3.PNG" height="400" width="700">
+</p>
