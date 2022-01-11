@@ -9,7 +9,6 @@
 ---
 
 ### Description
-<br><br><br>
 
 1. 간단한 로그인만을 구현하기 위해 기본키로 사용할 user_numberd 필드, user_id 필드, user_password 필드만 구성
 <br><br>
