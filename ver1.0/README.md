@@ -27,8 +27,6 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
 
 <img src="./image/4.PNG">
 
-<br>
-
 ---
 
 2. PHP와 Mysql을 연동시키기 위해 MySQLi 확장 API 절차 지향 스타일로 연동
