@@ -57,7 +57,6 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
 ---
 
 3. 부트스트랩을 사용하여 로그인화면을 구현
-<br><br>
 ```html
 <?php
     include("./db_connetcion.php")
