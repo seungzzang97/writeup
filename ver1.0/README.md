@@ -1,5 +1,6 @@
-### Mini_Web v1.0
-- SQL Injection의 정확한 원리를 파악하기 위해 직접 로그인 기능만을 구현
+### Web v1.0
+- 웹 관련 해킹 기법의 정확한 원리를 파악하기 위해 직접 로그인 기능만을 구현한 WEB
+- 기본적으로 취약한 환경으로 구성
 ---
 ### Tools
 - MySql
@@ -10,8 +11,8 @@
 
 ### Description
 
-1. 간단한 로그인만을 구현하기 위해 기본키로 사용할 user_numberd 필드, user_id 필드, user_password 필드만 구성
-<br><br>
+1. 간단한 로그인만을 구현하기 위해 기본키로 사용할 user_number 필드, user_id 필드, user_password 필드를 구성했으며, 회원가입 기능이 아직 구현되어 있지 않기 때문에 회원 정보는 임의로 등록함
+
 ```
 CREATE TABLE user (
     user_number INT(11) NOT NULL AUTO_INCREMENT,
@@ -30,7 +31,7 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
 ---
 
 2. PHP와 Mysql을 연동시키기 위해 MySQLi 확장 API 절차 지향 스타일로 연동
-<br><br>
+
 ```php
 <?php
     mysqli_report(MYSQLI_REPORT_OFF);
@@ -64,7 +65,7 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
 
 <html>
     <head>
-        <link rel="stylesheet" href="./Login.css">
+        <link rel="stylesheet" href="./login.css">
         
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -104,7 +105,6 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
 ---
 
 4. 로그인 인증 구현
-
 ```php
 <?php
     include("./db_connetcion.php");
@@ -112,31 +112,30 @@ INSERT INTO user VALUES(DEFAULT, 'guest', '1111');
     $user_id = trim($_POST['user_id']);
     $user_password = trim($_POST['user_password']);
     
-    $sql = "SELECT * FROM user WHERE user_id = '$user_id'";
+    $sql = "SELECT * FROM user WHERE user_id = '$user_id' and user_password = '$user_password'";
+
     $result = mysqli_query($conn, $sql);
     $user = mysqli_fetch_assoc($result);
 
-    if(!$user['user_id'] || !($user_password == $user['user_password'])){
-        echo "<script>alert('Wrong !');</script>";
-        echo "<script>location.replace('./index.php')</script>";
+    if(!$result){
+        echo "Error";
         exit;
-    }
+    } 
 
-    $_SEESION['session_user_id'] = $user_id;
-
-    mysqli_close($conn);
-
-    if(isset($_SESSION)){
+    if($user['user_id']) {
         echo "<script>alert('인증성공');</script>";
         echo "<script>location.replace('./success.php');</script>"; 
     }
+    else {
+        echo "<script>alert('인증실패');</script>";
+        echo "<script>location.replace('./index.php');</script>"; 
+    }
 ?>
 ```
-<br>
 
-- 회원가입 기능을 구현하지 않았기 때문에 데이터베이스에 임의로 데이터를 입력함 
-- 사용자가 입력한 패스워드와 DB에서의 user_password는 암호화 X
-<br>
+- 사용자가 입력한 패스워드와 DB에서의 user_password는 암호화 함수를 사용하지 않음
+
+---
 
 ```php
     if(!$user['user_id'] || !($user_password == $user['user_password'])){
