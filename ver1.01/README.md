@@ -16,7 +16,7 @@
 
 - 회원가입 기능을 추가하기 위해 데이터베이스 컬럼 추가
 
-<p align="center"><img src="./image/1.png"></p>
+<img src="./image/1.png">
 
 ---
 
@@ -27,9 +27,9 @@
     <p>new user? <a href="./register.php">create new account</a></p>
 </div>
 ```
-<p align="center"><img src="./image/3.png"></p>
+<img src="./image/3.png">
 
-- 기존 로그인 페이지에 회원가입 페이지로 넘어가는 링크 추가
+- 기존 로그인 페이지에 회원가입 페이지로 이동하는 링크 추가
 
 ---
 
@@ -108,7 +108,7 @@
 </html>
 ```
 
-<p align="center"><img src="./image/2.png"></p>
+<img src="./image/2.png">
 
 ---
 3. 회원가입 기능 구현
@@ -192,26 +192,32 @@
     }
 ?>
 ```
-<p align="center"><img src="./image/4.png"></p>
+- 회원가입에 필요한 데이터 입력
 
-<p align="center"><img src="./image/7.png"></p>
+<img src="./image/4.png">
 
-<p align="center"><img src="./image/8.png"></p>
+- 회원가입 후 DB에 입력된 데이터
 
-<p align="center"><img src="./image/9.png"></p>
+<img src="./image/7.png">
 
-- 회원가입 후 DB에 데이터가 입력 되었고, 로그인 시 입력되는 것을 확인할 수 있다.
+- 등록된 계정으로 로그인 시도
 
----
+<img src="./image/8.png">
 
-<p align="center"><img src="./image/5.png"></p>
-
-<p align="center"><img src="./image/6.png"></p>
-
-- 동일한 계정으로 가입 시 이미 존재한다는 경고창을 실행시키는 것을 확인할 수 있다.
+<img src="./image/9.png">
 
 ---
 
+- 이미 존재하는 계정으로 로그인 시도
 
-[TOP](#Web-v1.01)
+<img src="./image/5.png">
+
+- 존재하는 계정은 경고창 알림
+
+<img src="./image/6.png">
+
+
+
+---
+
 
