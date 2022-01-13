@@ -33,6 +33,8 @@
 
 ---
 
+- 회원가입 페이지
+
 ```php
 <?php
     include("db_connetcion.php");
