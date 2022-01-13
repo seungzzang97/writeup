@@ -16,7 +16,7 @@
 
 - 회원가입 기능을 추가하기 위해 데이터베이스 컬럼 추가
 
-<p align="center"><img src="./image/1.PNG"></p>
+<p align="center"><img src="./image/1.png"></p>
 
 ---
 
@@ -27,7 +27,7 @@
     <p>new user? <a href="./register.php">create new account</a></p>
 </div>
 ```
-<p align="center"><img src="./image/3.PNG"></p>
+<p align="center"><img src="./image/3.png"></p>
 
 - 기존 로그인 페이지에 회원가입 페이지로 넘어가는 링크 추가
 
@@ -108,7 +108,7 @@
 </html>
 ```
 
-<p align="center"><img src="./image/2.PNG"></p>
+<p align="center"><img src="./image/2.png"></p>
 
 ---
 3. 회원가입 기능 구현
@@ -192,21 +192,21 @@
     }
 ?>
 ```
-<p align="center"><img src="./image/4.PNG"></p>
+<p align="center"><img src="./image/4.png"></p>
 
-<p align="center"><img src="./image/7.PNG"></p>
+<p align="center"><img src="./image/7.png"></p>
 
-<p align="center"><img src="./image/8.PNG"></p>
+<p align="center"><img src="./image/8.png"></p>
 
-<p align="center"><img src="./image/9.PNG"></p>
+<p align="center"><img src="./image/9.png"></p>
 
 - 회원가입 후 DB에 데이터가 입력 되었고, 로그인 시 입력되는 것을 확인할 수 있다.
 
 ---
 
-<p align="center"><img src="./image/5.PNG"></p>
+<p align="center"><img src="./image/5.png"></p>
 
-<p align="center"><img src="./image/6.PNG"></p>
+<p align="center"><img src="./image/6.png"></p>
 
 - 동일한 계정으로 가입 시 이미 존재한다는 경고창을 실행시키는 것을 확인할 수 있다.
 
