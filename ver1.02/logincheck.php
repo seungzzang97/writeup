@@ -1,6 +1,7 @@
 <?php
     include("./db_connetcion.php");
-    
+    include("./index.php");
+
     $user_id = trim($_GET['user_id']);
     $user_password = trim($_GET['user_password']);
     
@@ -13,12 +14,20 @@
         exit;
     } 
 
-    if($user['user_id']) {
-        echo "";
-        echo "<p style='text-align:center'>Hi</p>"; 
+    
+
+    if(($user['user_id']) && ($user['user_password']==$user_password)) {
+        echo "<p style='text-align:center'>  Hello {$user['user_id']} ! </p>"; 
     }
+    else if($user['user_id']) {
+        echo "<p style='text-align:center'>  No Hack! </p>";
+    }
+
     else {
-        echo "<script>alert('인증실패');</script>";
-        echo "<script>location.replace('./index.php');</script>"; 
+        echo "<p style='text-align:center'>  Login fail ! </p>";
     }
+
+    echo "<p style= 'text-align:center'> SELECT * FROM user WHERE user_id = '{$user_id}' and user_password = '{$user_password}' </p>";
+
+
 ?>
