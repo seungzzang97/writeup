@@ -17,6 +17,7 @@
         echo "<script>alert('인증성공');</script>";
         echo "<script>location.replace('./success.php');</script>"; 
     }
+    
     else {
         echo "<script>alert('인증실패');</script>";
         echo "<script>location.replace('./index.php');</script>"; 
