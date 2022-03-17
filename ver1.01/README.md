@@ -1,6 +1,11 @@
 ### Web v2.0
 
-I have added a members modification, memberlist that admin can only access, logout functions in WEB v2.0.
+I have created several functions in WEB ver1.01 as follows:
+- Login & Logout
+- Join & Modify
+- admin-only membership list
+
+Accounts password saves without encryption in database.
 
 
 

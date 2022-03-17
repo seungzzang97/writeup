@@ -40,7 +40,7 @@
       <div class="container">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-                <h1> Member List </h1>
+                <h1> Membership List </h1>
                 <table class="table table-striped custab">
                     <caption>Total : <?php echo $mem_total;?></captin>
                     <thead>
