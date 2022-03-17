@@ -7,9 +7,9 @@ I have created several functions in WEB ver1.01 as follows:
 
 **※ Accounts password saves without encryption in database.**
 
-Development Environment is as foolows:
+Development Environment is as follows:
 - MySQL
 - Apache
 - PHP
-
+---
 
