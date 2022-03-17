@@ -1,72 +1,81 @@
 <?php
-    include("db_connetcion.php");
-    $mode = "insert";
+   include("./db_connection.php");
+   if(isset($_SESSION['USERS'])){
+      $id = $_SESSION['USERS'];
+      
+      $sql = " SELECT * FROM webuser WHERE user_id = '$id' ";
+      $result = mysqli_fetch_assoc(mysqli_query($conn, $sql));
+      mysqli_close($conn);
+
+      $mode = "modify";
+      $modify_a = "readonly";
+   }
+
+   else {
+      $mode = "insert";
+      $modify_a = "";
+   }
 ?>
 
-<html>
-<head>
-    <title>회원가입</title>
-    <link rel="stylesheet" href="./login.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<!-- All the files that are required -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+      <meta charset="UTF-8">
+      <title> Vunlerable Website </title>
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <link rel="stylesheet" href="./style/style.css">
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
+
 <body>
-<!-- REGISTRATION FORM -->
-<div class="text-center" style="padding:50px 0">
-	<div class="logo">Register</div>
-	<!-- Main Form -->
-	<div class="login-form-1">
-		<form action="./RegisterCheck.php" id="register-form" class="text-left" method="post">
-            <input type="hidden" name="mode" value="<?php echo $mode ?>">
-			<div class="login-form-main-message"></div>
-			<div class="main-login-form">
-				<div class="login-group">
-					<div class="form-group">
-						<label for="user_id" class="sr-only">Email address</label>
-						<input type="text" class="form-control" id="user_id" name="user_id" placeholder="ID">
-					</div>
-					<div class="form-group">
-						<label for="user_password" class="sr-only">Password</label>
-						<input type="password" class="form-control" id="user_password" name="user_password" placeholder="Password">
-					</div>
-					<div class="form-group">
-						<label for="user_password_confirm" class="sr-only">Password Confirm</label>
-						<input type="password" class="form-control" id="user_password_confirm" name="user_password_confirm" placeholder="Confirm Password">
-					</div>
-					
-					<div class="form-group">
-						<label for="user_email" class="sr-only">Email</label>
-						<input type="text" class="form-control" id="user_email" name="user_email" placeholder="Email">
-					</div>
-					<div class="form-group">
-						<label for="user_name" class="sr-only">Full Name</label>
-						<input type="text" class="form-control" id="user_name" name="user_name" placeholder="Full Name">
-					</div>
-					
-					<div class="form-group login-group-checkbox">
-						<input type="radio" class="" name="user_gender" id="male" placeholder="male" value="male">
-						<label for="male">male</label>
-						
-						<input type="radio" class="" name="user_gender" id="female" placeholder="female" value="female">
-						<label for="female">female</label>
-					</div>
-				</div>
-				<button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
-			</div>
-			<div class="etc-login-form">
-				<p>already have an account? <a href="./index.php">login here</a></p>
-			</div>
-		</form>
-	</div>
-	<!-- end:Main Form -->
-</div>
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>Vulnerable Website</h2>
+            <p>Login or register from here to access.</p>
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form action="./register_ck.php" method="GET">
+                  <input type="hidden" name="mode" value="<?php echo $mode ?>">
+                  <div class="form-group">
+                  <?php if($mode=="modify") echo '<h1> Update </h1>';
+                        else echo '<h1> Sign Up </h1>'?>
+                     <label>Name</label>
+                     <input type="text" class="form-control" value="<?php echo $result['USER_NAME'] ?? ''?>" name="name">
+                  </div>
+                  <div class="form-group">
+                     <label>User ID</label>
+                     <input type="text" class="form-control" value="<?php echo $result['USER_ID'] ?? ''?>" <?php echo $modify_a ?> name="id">
+                  </div>
+                  <div class="form-group">
+                     <label>Password</label>
+                     <input type="password" class="form-control" value="" name="pw">
+                  </div>
+                  <div class="form-group">
+                     <label>Verify password</label>
+                     <input type="password" class="form-control" value="" name="pw2">
+                  </div>
+                  <div class="form-group">
+                     <label><input type="radio" name="gender" value="male" checked> male </label>
+                     <label><input type="radio" name="gender" value="female"> female </label>
+                  </div> 
+                  <button type="submit" class="btn btn-black">Confirm</button>
+                  <?php if($mode=="modify"){ echo '<button type="submit" class="btn btn-secondary" formaction="./main.php">Back</button>';}
+                        else echo '<button type="submit" class="btn btn-secondary" formaction="./index.php">Login</button>'?>
+               </form>
+            </div>
+         </div>
+      </div>
 </body>
 </html>
+
+
+
+

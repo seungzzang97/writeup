@@ -19,30 +19,19 @@
 <div class="sidenav">
          <div class="login-main-text">
             <h2>Vulnerable Website</h2>
-            <p>Login or register from here to access.</p>
+            <p>Hello! <?php echo ucfirst($_SESSION['USERS']) ?>!</p>
          </div>
       </div>
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <form action="./login_ck.php" method="GET">
-                  <div class="form-group">
-                     <label>User Name</label>
-                     <input type="text" class="form-control" placeholder="User Name" name="id">
-                  </div>
-                  <div class="form-group">
-                     <label>Password</label>
-                     <input type="password" class="form-control" placeholder="Password" name="pw">
-                  </div>
-                  <button type="submit" class="btn btn-black">Login</button>
-                  <button type="submit" class="btn btn-secondary" formaction="./register.php">Register</button>
+               <form method="GET">
+                  <button type="submit" class="btn btn-black" formaction="./register.php">Modify</button>
+                  <button type="submit" class="btn btn-black" formaction="./logout.php">Logout</button><br><br>
+                  <button type="submit" class="btn btn-secondary" formaction="./member_list.php">Member List</button>
                </form>
             </div>
          </div>
       </div>
 </body>
 </html>
-
-
-
-

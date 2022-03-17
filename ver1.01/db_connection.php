@@ -14,8 +14,5 @@
         exit;
     }
     
-    echo '<p>DB[<span style="color:green">OK</span>]</p>';
-
     session_start();
 ?>
-
