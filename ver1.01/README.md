@@ -9,5 +9,8 @@ I have created several functions in WEB ver1.01 as follows:
 
 ---
 
-![1](./image/1.png)*TEST*
+<p align="center">
+  <img src="./image/1.png">
+  SIGN IN
+</p> 
 
