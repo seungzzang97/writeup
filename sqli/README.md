@@ -1,5 +1,5 @@
 # SQL Injection
-SQL Injection is a common, basic web hacking technique. However, We must never ignore it because this technique could still be fatal. For that reason, I'm going to describe simple notions and principles as well as ways to prevent it.
+SQL Injection is a common, basic web hacking technique. However, You must never ignore it because this technique could still be fatal. For that reason, I'm going to describe simple notions and principles as well as ways to prevent it.
 
 ---
 
