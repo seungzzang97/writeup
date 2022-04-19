@@ -10,17 +10,15 @@ SQL Injections, also known SQLi, attacks the database of a website by manipulati
 
 ### The type of SQLi is as follows.
 
-1. In-band SQLi
+1. Error-based SQLi (In-band SQLi)
 
-2. Error-based SQLi
+2. Union-based SQLi (In-band SQLi)
 
-3. Union-based SQLi
+4. Boolean-basaed blind SQLi (Blind SQLi)
 
-4. Boolean-basaed blind SQLi (Known content-based SQLi)
+5. Time-based SQLi (Blind SQLi)
 
-5. Time-based SQLi
-
-6. Out-of-band SQLi
+6. Out-of-band SQLi 
 
 ---
 
