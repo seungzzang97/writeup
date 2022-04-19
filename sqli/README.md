@@ -1,11 +1,27 @@
 # SQL Injection
-SQL Injection is a common, basic web hacking technique. However, We must never ignore it because this technique has been still being fatal. For that reason, I'm going to describe simple notions, principles as well as ways to prevent it.
+SQL Injection is a common, basic web hacking technique. However, We must never ignore it because this technique could still be fatal. For that reason, I'm going to describe simple notions and principles as well as ways to prevent it.
 
 ---
 
 # What is SQL INJECTION?
-SQL Injections is also known as SQLI. It aattacks the database of a website by manipulating input values of clients, which mainly occurs in the case administrators of the website properly does not filter strings, escape sequences about the input. as well as It's a basic hacking technique that someone can carry out. on the contrary, It's fatal if it's succeeded.
+SQL Injections, also known SQLi, attacks the database of a website by manipulating the input values of clients, which mainly occurs in the case administrators of the website properly does not filter strings, escape sequences about the input. as well as It's a basic hacking technique that someone can carry out. SQLi is extremely simple and known well that's why robability of success is low, on the contrary, It's terribly fatal if it's succeeded.
 
-# How to SQL Injection with my web
-Values of ID, password are delivered to a web server when somebody is login, the values are delivered in database over again, as well as the database makes inquiry about the values whether exists or not. Furthermore, A login is succeeded if there is information corresponding with the values.
+---
+
+### The type of SQLi is as follows.
+
+1. In-band SQLi
+
+2. Error-based SQLi
+
+3. Union-based SQLi
+
+4. Boolean-basaed blind SQLi (Known content-based SQLi)
+
+5. Time-based SQLi
+
+6. Out-of-band SQLi
+
+---
+
 
