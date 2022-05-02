@@ -4,7 +4,7 @@ A colletion of wargames solving
 
 
 ### Lord of SQLInjection
-- [gremlin](./lord/README.md)
+- [gremlin](./lord/gremlin/README.md)
 
 
 
