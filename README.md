@@ -1,5 +1,10 @@
+A colletion of wargames solving
 
-- [SQL Injection](./sqli/README.md)
+- [Lord of SQLInjection](#lord-of-sqlinjection)
+
+
+### Lord of SQLInjection
+- [gremlin](./lord/README.md)
 
 
 
