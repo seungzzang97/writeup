@@ -16,7 +16,9 @@
   highlight_file(__FILE__);
 ?>
 ```
-preg_match is the fuction filtered strings. for that reason Some strings are being filtered by it. When I try inputting filtered strings, It's as following.
+preg_match is the function that filter strings. 
+for that reason, Some strings are being filtered by it. 
+When I try inputting filtered strings, It's as follows.
 
 ```
 select id from prob_gremlin where id='{$_GET[id]}' and pw='{$_GET[pw]}';
