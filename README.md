@@ -1,4 +1,4 @@
-Writeup
+Wargames writeup
 
 - [Lord of SQLInjection](#lord-of-sqlinjection)
 
