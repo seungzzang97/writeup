@@ -1,4 +1,4 @@
-A colletion of wargames solving
+Writeup
 
 - [Lord of SQLInjection](#lord-of-sqlinjection)
 
