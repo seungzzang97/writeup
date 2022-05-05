@@ -1,6 +1,6 @@
 Wargames writeup
 
-- [Lord of SQLInjection](#lord-of-sqlinjection)
+- [Lord of SQLI [WEB]](#lord-of-sqlinjection)
 
 
 ### Lord of SQLi [WEB]
